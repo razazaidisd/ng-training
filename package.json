@@ -1,0 +1,15 @@
+{
+  "name": "ng-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Syed Iqrar Raza",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3"
+  }
+}

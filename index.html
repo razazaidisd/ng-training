@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NG - Training</title>
+</head>
+<body ng-app="ngTraining">
+	<div class="main-app" ng-controller="MainController as vm">
+		<h1>{{vm.title}}</h1>
+
+	    <ul class="nav navbar-nav">
+	        <li><a ui-sref="home">Home</a></li>
+	        <li><a ui-sref="people">People</a></li>
+	        <li><a ui-sref="settings">Settings</a></li>
+	    </ul>
+		
+		<ui-view></ui-view>
+	</div>
+</body>
+<!--Vendor - Third Party -->
+<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+<!-- Application scripts -->
+<script type="text/javascript" src="app.module.js"></script>
+<script type="text/javascript" src="app.route.js"></script>
+<script type="text/javascript" src="app.controller.js"></script>
+
+
+<script type="text/javascript" src="app/modules/home/home.controller.js"></script>
+<script type="text/javascript" src="app/modules/people/people.controller.js"></script>
+
+
+
+</html>
