@@ -1,1 +1,19 @@
 <h3>People Page</h3>
+<div class="user" ng-if="vm.isUsersLoaded">
+	<ul>
+		<li ng-repeat="user in vm.users">
+			<a ui-sref="people.singleUser({userId: user.id})">
+				{{user.name}}
+			</a>
+		</li>
+	</ul>
+</div>
+<div ng-if="!vm.isUsersLoaded">
+	User Loading...
+</div>
+<div ng-if="vm.error">
+	{{vm.error}}
+	<button type="button" ng-click="vm.fetchUsers()"> Try Again</button>
+</div>
+<!-- Nested Routing - We have to add ui-view in template -->
+<ui-view></ui-view>

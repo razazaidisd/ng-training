@@ -5,10 +5,12 @@
 		.module('ngTraining')
 		.controller('HomeController', HomeController);
 
+	/* @ngInject */
 	function HomeController(){
 		var vm = this;
 		vm.title = "Home Page";
 
+		
 	}
 
 })();
