@@ -1,7 +1,8 @@
 <h3>People Page</h3>
+<label>Search: <input ng-model="vm.searchText"></label>
 <div class="user" ng-if="vm.isUsersLoaded">
 	<ul>
-		<li ng-repeat="user in vm.users">
+		<li ng-repeat="user in vm.users | filter:vm.searchText">
 			<a ui-sref="people.singleUser({userId: user.id})">
 				{{user.name}}
 			</a>

@@ -26,6 +26,12 @@
           controller: 'UserController',
           controllerAs: 'vm'
         })
+        .state('editUserPage', {
+          url: '/user/edit/{userId}',
+          templateUrl: 'app/modules/people/edit-user-page.html',
+          controller: 'EditUserController',
+          controllerAs: 'vm'
+        })
         .state('settings', {
           url: '/settings',
           template: '<h3>Settings</h3>'

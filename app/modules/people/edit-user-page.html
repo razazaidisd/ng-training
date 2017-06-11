@@ -1,0 +1,18 @@
+<h3>{{vm.pageTitle}}</h3>
+<div ng-if="!vm.isUserLoaded">
+	Loading...
+</div>
+<div ng-if="vm.error" >
+	<p class="alert alert-danger">Error with Status: {{vm.error.status}}</p>
+</div>
+<div ng-if="vm.isUserLoaded && vm.post">
+	<form ng-submit="vm.updateUser()">
+		<p>Post Id: {{vm.post.id}}</p>
+		<p>User Id: {{vm.post.userId}}</p>
+		<input type="text" ng-model="vm.post.title" class="form-control">
+		<textarea ng-model="vm.post.body" class="form-control" rows="5"></textarea>
+		<button type="submit" class="btn btn-primary">
+			Update User
+		</button>
+	</form>
+</div>
